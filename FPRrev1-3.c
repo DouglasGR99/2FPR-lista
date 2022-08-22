@@ -1,7 +1,15 @@
 /*
+<<<<<<< HEAD
 	QUESTÃO 03:
 	Desenvolver uma função que calcule o n-ésimo
 	termo da sequência de Fibonacci.
+=======
+
+	QUESTÃO 03:
+	Desenvolver uma função que calcule o n-ésimo
+	termo da sequência de Fibonacci.
+
+>>>>>>> master
 */
 
 #include <stdio.h>
