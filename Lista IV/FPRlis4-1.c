@@ -15,11 +15,11 @@
 int len(char s[]);
 void cpy(char s1[],char s2[]);
 void cat(char s1[],char s2[]);
-void cmp(char s1[],char s2[]);
+int cmp(char s1[],char s2[]);
 
 
 void main(){
-	int opc;
+	int opc,retorno;;
 	char s1[TAM],s2[TAM];
 	printf("Insira uma palavra para s1 e outra para s2:\n");
 	fflush(stdin);
@@ -32,13 +32,21 @@ void main(){
 		case 1:printf("\n o tamanho e: %d",len(s1));
 			break;
 			
-		case 2:cpy(s2,s1);
+		case 2:cpy(s1,s2);
 			break;
 			
 		case 3:cat(s1,s2);
 			break;
 			
-		case 4:cmp(s1,s2);
+		case 4: 
+			retorno=cmp(s1,s2);
+			if (retorno == 0){
+				printf ("\n\nAs strings %s e %s sao iguais!",s1,s2);
+			}
+			else{
+				printf ("\n\nAs strings %s e %s nao sao iguais!",s1,s2);
+				printf (" (retorno = %d)",retorno);
+			}
 			break;
 			
 	}
@@ -55,6 +63,8 @@ int len(char s[]){
 	return i;
 }
 
+
+
 void cpy(char s1[],char s2[]){
 	int i;
 	
@@ -67,10 +77,18 @@ void cpy(char s1[],char s2[]){
 	s1[i]='\0';
 }
 
+
 void cat(char s1[],char s2[]){
-	
+	int i,j;
+	for (i=len(s1),j=0;s2[j];i++,j++){
+		s1[i] = s2[j];
+	}
+	s1[i]='\0';
 }
 
-void cmp(char s1[],char s2[]){
-	
+
+int cmp(char s1[],char s2[]){
+	int i;
+	for (i=0;(s1[i]==s2[i])&&(s1[i])&&(s2[i]);i++);
+	return s1[i]-s2[i];
 }
