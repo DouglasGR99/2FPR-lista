@@ -14,12 +14,12 @@
 #include <stdio.h>
 #include <string.h>
 
-void strEdit(char s[],int p, int n);
+void strEdit(char s[],int p, int n,char s2[]);
 
 void main()
 	{
 	int p,n;
-	char s[30];
+	char s[30],s2[30];
 	printf("\nInsira a palavra: ");
 	fflush(stdin);
 	gets(s);
@@ -28,14 +28,13 @@ void main()
 	printf("\nInsira quantas letras: ");
 	scanf("%d",&n);
 	
-	strEdit(s,p,n);
-	
+	strEdit(s,p,n,s2);
+	printf("%s",s2);
 }
 
-void strEdit(char s[],int p, int n)
+void strEdit(char s[],int p, int n,char s2[])
 	{
 	int i,j;
-	char s2[30];
 	
 	if((p>=0)&&(n>0)&&(p<=strlen(s)))
 	{
@@ -50,5 +49,5 @@ void strEdit(char s[],int p, int n)
 		printf("\ns2 esta vazio.");
 	}
 
-	printf("%s",s2);
+	
 }
