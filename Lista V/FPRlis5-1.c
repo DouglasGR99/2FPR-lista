@@ -12,7 +12,7 @@
 int distint(char s[]);
 
 void main()
-	{
+{
 	char s[30];
 	printf("\nInsiraum nome: ");
 	fflush(stdin);
@@ -21,7 +21,7 @@ void main()
 }
 
 int distint(char s[])
-	{
+{
 	int i,j,cont=strlen(s);
 	for(i=0;i<strlen(s);i++)
 	{
