@@ -50,7 +50,6 @@ void string3(char s1[],char s2[])
 		}
 	}
 	s3[k]=('\0');
-	printf("\n\n%s",s3);
 	
 	//removendo char repetidos
 	for(l=0;l<strlen(s3);l++)
