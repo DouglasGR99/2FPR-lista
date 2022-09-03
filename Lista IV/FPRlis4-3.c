@@ -17,7 +17,7 @@
 void strEdit(char s[],int p, int n,char s2[]);
 
 void main()
-	{
+{
 	int p,n;
 	char s[30],s2[30];
 	printf("\nInsira a palavra: ");
@@ -33,7 +33,7 @@ void main()
 }
 
 void strEdit(char s[],int p, int n,char s2[])
-	{
+{
 	int i,j;
 	
 	if((p>=0)&&(n>0)&&(p<=strlen(s)))
