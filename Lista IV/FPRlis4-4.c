@@ -12,7 +12,7 @@
 void remChar(char a,char s[]);
 
 void main()
-	{
+{
 	char a,s[30];
 	
 	printf("\nInsira uma palavra: ");
@@ -28,7 +28,7 @@ void main()
 }
 
 void remChar(char a,char s[])
-	{
+{
 	int i,j,cont=0;
 	
 	for(i=0;i<(strlen(s));i++)
