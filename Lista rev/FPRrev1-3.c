@@ -22,16 +22,19 @@
 
 int fibonacci(int n);
 
-void main(){
+void main()
+{
 	int n;
 	printf("Insira o termo:\n");
 	scanf("%d",&n);
 	printf("\nO N-esimo termo e %d.",fibonacci(n));
 }
 
-int fibonacci(int n){
+int fibonacci(int n)
+{
 	int i,j=0,k=1,l=0;
-	for(i=0;i<=n;i++){
+	for(i=0;i<=n;i++)
+	{
 		
 		l=k;
 		k=j;
