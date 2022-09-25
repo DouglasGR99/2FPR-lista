@@ -11,14 +11,16 @@
 
 float celToFah(float cel);
 
-void main(){
+void main()
+{
 	float cel;
 	printf("Insira temperatura em celsius:\n");
 	scanf("%f",&cel);
 	printf("%.2f graus fahrenheit.",celToFah(cel));
 }
 
-float celToFah(float cel){
+float celToFah(float cel)
+{
 	float fah;
 	return fah=(cel*9/5)+32;
 }
