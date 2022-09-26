@@ -11,7 +11,8 @@
 
 void exibir(int n,int a, int b);
 
-void main(){
+void main()
+{
 	int n,a,b;
 	
 	printf("insira valores para n, a e b:\n");
@@ -20,10 +21,13 @@ void main(){
 }
 
 
-void exibir(int n,int a, int b){
+void exibir(int n,int a, int b)
+{
 	int i;
-	for(i=a;i<=b;i++){
-		if(i%n==0){
+	for(i=a;i<=b;i++)
+	{
+		if(i%n==0)
+		{
 			printf(" %d",i);
 		}
 	}
