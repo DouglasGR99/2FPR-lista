@@ -9,7 +9,8 @@
 #include <stdio.h>
 #include <string.h>
 
-int pali(char s[],int ini,int fin);
+int palindromo(char s[]);
+int paliRec(char s[],int ini,int fin);
 
 void main()
 {
@@ -17,9 +18,8 @@ void main()
 	printf("Insira uma palavra:\n");
 	fflush(stdin);
 	gets(s);
-	int ini=0, fin=(strlen(s)-1);
 	
-	if(pali(s,ini,fin))
+	if(palindromo(s))
 	{
 		printf("\nE um palindromo");
 	}
@@ -30,32 +30,30 @@ void main()
 }
 
 
-int pali(char s[],int ini,int fin)
+int palindromo(char s[])
 {
-	printf("\n%s, %d, %d, %c, %c",s,ini,fin,s[ini],s[fin]);
-	
+	return paliRec(s,0,strlen(s)-1);
+}
+
+
+int paliRec(char s[],int ini,int fin)
+{
 	if(ini<=fin)
 	{
-		if(pali(s,(ini+1),(fin-1))==1)
+		if(s[ini]!=s[fin])
 		{
-			printf("\nok");
 			if((s[ini])!=(s[fin]))
 			{
-				printf("\n ini %c, fin %c",s[ini],s[fin]);
-				printf(" retorno 0");
 				return 0;	
 			}
 			else
 			{
-				printf(" retorno 1");
-				return 1;
+				return paliRec(s,ini+1,fin-1);
 			}
 		}
 		else
 		{
-			printf("\nerro");
-			return 0;
+			return 1;
 		}
 	}
-	printf("\n final da func");
 }
