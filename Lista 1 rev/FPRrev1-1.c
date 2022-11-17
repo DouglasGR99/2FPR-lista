@@ -15,7 +15,7 @@ void main()
 {
 	int n,a,b;
 	
-	printf("insira valores para n, a e b:\n");
+	printf("insira \"valores\" para n, a e b:\n");
 	scanf("%d%d%d",&n,&a,&b);
 	exibir(n,a,b);
 }
